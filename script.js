@@ -2,30 +2,8 @@
 
 document.addEventListener('DOMContentLoaded', function() {
 
-    // Smooth scroll for navigation links
-    const navLinks = document.querySelectorAll('a[href^="#"]');
-
-    navLinks.forEach(link => {
-        link.addEventListener('click', function(e) {
-            e.preventDefault();
-
-            const targetId = this.getAttribute('href');
-            if (targetId === '#') return;
-
-            const targetSection = document.querySelector(targetId);
-
-            if (targetSection) {
-                const headerOffset = 140;
-                const elementPosition = targetSection.getBoundingClientRect().top;
-                const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
-
-                window.scrollTo({
-                    top: offsetPosition,
-                    behavior: 'smooth'
-                });
-            }
-        });
-    });
+    // Smooth scroll handled by CSS scroll-behavior and scroll-padding-top
+    // No custom JavaScript needed - browser handles it automatically
 
     // Add fade-in animation on scroll
     const observerOptions = {
