@@ -463,6 +463,12 @@ section {
     letter-spacing: 0.02em;
 }
 
+.footer-logo-img {
+    width: 80px;
+    height: 80px;
+    object-fit: contain;
+}
+
 .footer-tagline {
     font-size: 0.75rem;
     color: var(--parchment);
