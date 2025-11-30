@@ -431,6 +431,99 @@ section {
 }
 
 /* ==========================================
+   Work Section
+   ========================================== */
+
+.work {
+    background-color: var(--cream);
+    padding: var(--space-xl) 0;
+}
+
+.work .section-title {
+    margin-bottom: var(--space-sm);
+}
+
+.work .section-intro {
+    text-align: center;
+    font-size: 1.125rem;
+    color: var(--coffee);
+    margin-bottom: var(--space-lg);
+    font-style: italic;
+}
+
+.work-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: var(--space-lg);
+    margin-top: var(--space-lg);
+}
+
+.work-card {
+    background-color: var(--parchment);
+    padding: var(--space-lg);
+    border-radius: var(--border-radius);
+    border-left: 3px solid var(--gold);
+    transition: all 0.3s ease;
+}
+
+.work-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 24px rgba(44, 24, 16, 0.15);
+    border-left-color: var(--burgundy);
+}
+
+.work-category {
+    display: inline-block;
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--burgundy);
+    font-weight: 600;
+    margin-bottom: var(--space-sm);
+    padding: 0.25rem 0.75rem;
+    background-color: rgba(139, 64, 73, 0.1);
+    border-radius: var(--border-radius);
+}
+
+.work-card h3 {
+    font-size: 1.5rem;
+    color: var(--espresso);
+    margin-bottom: var(--space-sm);
+}
+
+.work-description {
+    color: var(--charcoal);
+    line-height: 1.7;
+    margin-bottom: var(--space-md);
+}
+
+.work-details {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-sm);
+    padding-top: var(--space-md);
+    border-top: 1px solid var(--light-gray);
+}
+
+.work-detail {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    font-size: 0.9rem;
+}
+
+.detail-label {
+    font-weight: 600;
+    color: var(--coffee);
+    margin-right: var(--space-sm);
+}
+
+.work-detail span:last-child {
+    color: var(--charcoal);
+    text-align: right;
+}
+
+/* ==========================================
    Footer
    ========================================== */
 
