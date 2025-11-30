@@ -1,0 +1,589 @@
+/* ==========================================
+   the.cafe - Sophisticated Parisian Aesthetic
+   ========================================== */
+
+/* Color Palette - Warm, Rich, Artistic */
+:root {
+    /* Primary Colors */
+    --espresso: #2c1810;
+    --coffee: #4a3428;
+    --mocha: #6b4e3d;
+    --cream: #f5f1ed;
+    --parchment: #e8e3db;
+
+    /* Accent Colors */
+    --burgundy: #8b4049;
+    --gold: #c9a961;
+    --sage: #8b9a7a;
+
+    /* Neutral Colors */
+    --charcoal: #3d3d3d;
+    --warm-gray: #6b6561;
+    --light-gray: #d4cec7;
+
+    /* Fonts */
+    --font-serif: 'Iowan Old Style', 'Palatino Linotype', 'URW Palladio L', P052, serif;
+    --font-sans: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
+
+    /* Spacing */
+    --space-xs: 0.5rem;
+    --space-sm: 1rem;
+    --space-md: 2rem;
+    --space-lg: 4rem;
+    --space-xl: 6rem;
+
+    /* Layout */
+    --max-width: 1200px;
+    --border-radius: 2px;
+}
+
+/* ==========================================
+   Reset & Base Styles
+   ========================================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: var(--font-sans);
+    font-size: 17px;
+    line-height: 1.7;
+    color: var(--charcoal);
+    background-color: var(--cream);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+/* ==========================================
+   Typography
+   ========================================== */
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-serif);
+    font-weight: 600;
+    line-height: 1.2;
+    color: var(--espresso);
+    margin-bottom: var(--space-sm);
+}
+
+h1 {
+    font-size: 3.5rem;
+    letter-spacing: -0.02em;
+}
+
+h2 {
+    font-size: 2.5rem;
+    letter-spacing: -0.01em;
+}
+
+h3 {
+    font-size: 1.5rem;
+}
+
+p {
+    margin-bottom: var(--space-sm);
+}
+
+a {
+    color: var(--burgundy);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: var(--mocha);
+}
+
+/* ==========================================
+   Layout Components
+   ========================================== */
+
+.container {
+    max-width: var(--max-width);
+    margin: 0 auto;
+    padding: 0 var(--space-md);
+}
+
+section {
+    padding: var(--space-xl) 0;
+}
+
+/* ==========================================
+   Header
+   ========================================== */
+
+.header {
+    background-color: var(--espresso);
+    color: var(--cream);
+    padding: var(--space-md) 0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    border-bottom: 1px solid var(--mocha);
+}
+
+.header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo-container {
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+}
+
+.logo {
+    font-family: var(--font-serif);
+    font-size: 1.75rem;
+    font-weight: 600;
+    color: var(--cream);
+    letter-spacing: 0.02em;
+    transition: color 0.3s ease;
+}
+
+.logo:hover {
+    color: var(--gold);
+}
+
+.logo-tagline {
+    font-size: 0.75rem;
+    color: var(--parchment);
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    opacity: 0.8;
+}
+
+.nav {
+    display: flex;
+    gap: var(--space-md);
+    align-items: center;
+}
+
+.nav-link {
+    color: var(--parchment);
+    font-size: 0.95rem;
+    letter-spacing: 0.02em;
+    transition: color 0.3s ease;
+}
+
+.nav-link:hover {
+    color: var(--gold);
+}
+
+.nav-link-cta {
+    color: var(--gold);
+    font-weight: 500;
+}
+
+/* ==========================================
+   Hero Section
+   ========================================== */
+
+.hero {
+    background: linear-gradient(135deg, var(--coffee) 0%, var(--espresso) 100%);
+    color: var(--cream);
+    padding: var(--space-xl) 0 8rem 0;
+    position: relative;
+    overflow: hidden;
+}
+
+.hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image:
+        radial-gradient(circle at 20% 50%, rgba(201, 169, 97, 0.1) 0%, transparent 50%),
+        radial-gradient(circle at 80% 80%, rgba(139, 64, 73, 0.1) 0%, transparent 50%);
+    pointer-events: none;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 1;
+    max-width: 900px;
+}
+
+.hero-title {
+    font-size: 4rem;
+    margin-bottom: var(--space-md);
+    color: var(--cream);
+}
+
+.hero-title .highlight {
+    color: var(--gold);
+    font-style: italic;
+}
+
+.hero-subtitle {
+    font-size: 1.25rem;
+    line-height: 1.6;
+    color: var(--parchment);
+    margin-bottom: var(--space-lg);
+    max-width: 700px;
+}
+
+.hero-cta {
+    display: flex;
+    gap: var(--space-sm);
+}
+
+/* ==========================================
+   Philosophy Section
+   ========================================== */
+
+.philosophy {
+    background-color: var(--parchment);
+}
+
+.philosophy-content {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.section-title {
+    text-align: center;
+    margin-bottom: var(--space-md);
+    font-size: 3rem;
+}
+
+.philosophy-intro {
+    text-align: center;
+    font-size: 1.25rem;
+    line-height: 1.7;
+    color: var(--coffee);
+    margin-bottom: var(--space-lg);
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+    font-style: italic;
+}
+
+.philosophy-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: var(--space-lg);
+    margin-top: var(--space-lg);
+}
+
+.philosophy-point h3 {
+    color: var(--burgundy);
+    margin-bottom: var(--space-sm);
+    font-size: 1.5rem;
+}
+
+.philosophy-point p {
+    color: var(--charcoal);
+    line-height: 1.7;
+}
+
+/* ==========================================
+   Services Section
+   ========================================== */
+
+.services {
+    background-color: var(--cream);
+}
+
+.services .section-title {
+    margin-bottom: var(--space-lg);
+}
+
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: var(--space-md);
+}
+
+.service-card {
+    background-color: var(--parchment);
+    padding: var(--space-lg);
+    border-radius: var(--border-radius);
+    border-left: 3px solid var(--gold);
+    transition: all 0.3s ease;
+}
+
+.service-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 24px rgba(44, 24, 16, 0.1);
+    border-left-color: var(--burgundy);
+}
+
+.service-card h3 {
+    color: var(--coffee);
+    margin-bottom: var(--space-sm);
+    font-size: 1.5rem;
+}
+
+.service-card p {
+    color: var(--charcoal);
+    line-height: 1.7;
+    margin-bottom: 0;
+}
+
+/* ==========================================
+   Result Section
+   ========================================== */
+
+.result {
+    background: linear-gradient(135deg, var(--mocha) 0%, var(--coffee) 100%);
+    color: var(--cream);
+    padding: var(--space-lg) 0;
+}
+
+.result-content {
+    text-align: center;
+}
+
+.result-flow {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: var(--space-md);
+    font-size: 1.1rem;
+}
+
+.result-step {
+    font-family: var(--font-serif);
+    font-size: 1.25rem;
+    color: var(--cream);
+    font-weight: 500;
+}
+
+.result-arrow {
+    color: var(--gold);
+    font-size: 1.5rem;
+    font-weight: 300;
+}
+
+/* ==========================================
+   Contact Section
+   ========================================== */
+
+.contact {
+    background-color: var(--parchment);
+    padding: var(--space-xl) 0;
+}
+
+.contact-content {
+    text-align: center;
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.contact h2 {
+    font-size: 3rem;
+    margin-bottom: var(--space-sm);
+}
+
+.contact-intro {
+    font-size: 1.25rem;
+    color: var(--coffee);
+    margin-bottom: var(--space-lg);
+    line-height: 1.6;
+}
+
+/* ==========================================
+   Buttons
+   ========================================== */
+
+.btn {
+    display: inline-block;
+    padding: 0.875rem 2rem;
+    font-size: 1rem;
+    font-weight: 500;
+    text-align: center;
+    border-radius: var(--border-radius);
+    transition: all 0.3s ease;
+    cursor: pointer;
+    border: none;
+    font-family: var(--font-sans);
+    letter-spacing: 0.02em;
+}
+
+.btn-primary {
+    background-color: var(--burgundy);
+    color: var(--cream);
+}
+
+.btn-primary:hover {
+    background-color: var(--coffee);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(139, 64, 73, 0.3);
+}
+
+.btn-large {
+    padding: 1.25rem 3rem;
+    font-size: 1.25rem;
+    font-family: var(--font-serif);
+}
+
+/* ==========================================
+   Footer
+   ========================================== */
+
+.footer {
+    background-color: var(--espresso);
+    color: var(--parchment);
+    padding: var(--space-lg) 0 var(--space-md) 0;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: var(--space-lg);
+    padding-bottom: var(--space-lg);
+    border-bottom: 1px solid var(--mocha);
+}
+
+.footer-brand {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.footer-logo {
+    font-family: var(--font-serif);
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: var(--cream);
+    letter-spacing: 0.02em;
+}
+
+.footer-tagline {
+    font-size: 0.75rem;
+    color: var(--parchment);
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    opacity: 0.7;
+}
+
+.footer-links {
+    display: flex;
+    gap: var(--space-md);
+}
+
+.footer-links a {
+    color: var(--parchment);
+    font-size: 0.95rem;
+    transition: color 0.3s ease;
+}
+
+.footer-links a:hover {
+    color: var(--gold);
+}
+
+.footer-bottom {
+    text-align: center;
+}
+
+.footer-bottom p {
+    font-size: 0.875rem;
+    color: var(--warm-gray);
+    margin: 0;
+}
+
+/* ==========================================
+   Responsive Design
+   ========================================== */
+
+@media (max-width: 768px) {
+    h1 {
+        font-size: 2.5rem;
+    }
+
+    h2 {
+        font-size: 2rem;
+    }
+
+    .hero-title {
+        font-size: 2.75rem;
+    }
+
+    .hero-subtitle {
+        font-size: 1.1rem;
+    }
+
+    .header-content {
+        flex-direction: column;
+        gap: var(--space-sm);
+        text-align: center;
+    }
+
+    .nav {
+        flex-direction: column;
+        gap: var(--space-sm);
+    }
+
+    .philosophy-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .services-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .result-flow {
+        flex-direction: column;
+        gap: var(--space-sm);
+    }
+
+    .result-arrow {
+        transform: rotate(90deg);
+    }
+
+    .footer-content {
+        flex-direction: column;
+        gap: var(--space-md);
+        text-align: center;
+    }
+
+    .footer-links {
+        flex-direction: column;
+        gap: var(--space-sm);
+    }
+
+    section {
+        padding: var(--space-lg) 0;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero-title {
+        font-size: 2rem;
+    }
+
+    .section-title {
+        font-size: 2rem;
+    }
+
+    .container {
+        padding: 0 var(--space-sm);
+    }
+}
+
+/* ==========================================
+   Smooth Animations
+   ========================================== */
+
+@media (prefers-reduced-motion: no-preference) {
+    .service-card,
+    .btn,
+    .nav-link,
+    .logo {
+        transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+}
