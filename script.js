@@ -15,7 +15,7 @@ document.addEventListener('DOMContentLoaded', function() {
             const targetSection = document.querySelector(targetId);
 
             if (targetSection) {
-                const headerOffset = 80;
+                const headerOffset = 100;
                 const elementPosition = targetSection.getBoundingClientRect().top;
                 const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
 
