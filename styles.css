@@ -191,7 +191,7 @@ section {
 .hero {
     background: linear-gradient(135deg, var(--coffee) 0%, var(--espresso) 100%);
     color: var(--cream);
-    padding: var(--space-xl) 0 8rem 0;
+    padding: var(--space-xl) 0 3rem 0;
     position: relative;
     overflow: hidden;
 }
