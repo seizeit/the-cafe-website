@@ -311,6 +311,10 @@ section {
   color: var(--tech-red);
 }
 
+.logo:hover .logo-t {
+  color: var(--pure-white);
+}
+
 .logo-tagline {
   font-size: 0.625rem;
   color: var(--light-gray);
