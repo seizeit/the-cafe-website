@@ -1513,6 +1513,9 @@ section {
 
   .header.menu-open .nav {
     display: flex !important;
+    transform: translateY(0) !important;
+    opacity: 1 !important;
+    visibility: visible !important;
   }
 
 
