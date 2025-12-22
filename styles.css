@@ -1389,10 +1389,13 @@ section {
 
   .header-content {
     position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
   }
 
   .mobile-menu-toggle {
-    display: flex;
+    display: flex !important;
     flex-direction: column;
     justify-content: space-around;
     width: 30px;
@@ -1402,10 +1405,8 @@ section {
     cursor: pointer;
     padding: 0;
     z-index: 1001;
-    position: absolute;
-    right: 0;
-    top: 50%;
-    transform: translateY(-50%);
+    position: relative;
+    margin-left: auto;
   }
 
   .mobile-menu-toggle span {
@@ -1458,11 +1459,23 @@ section {
     border-bottom: 1px solid var(--light-grey);
     width: 100%;
     text-align: left;
+    font-size: 1rem;
+    font-weight: 500;
+    display: block;
+    color: var(--pure-black);
+  }
+
+  .nav-link:hover {
+    color: var(--tech-red);
+    background: rgba(255, 0, 0, 0.05);
   }
 
   .nav-link-cta {
     margin-top: var(--space-sm);
     text-align: center;
+    width: 100%;
+    display: block;
+    border-bottom: none;
   }
 
   .logo-text {
