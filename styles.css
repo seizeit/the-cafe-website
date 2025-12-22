@@ -1407,11 +1407,31 @@ section {
     padding-bottom: var(--space-xl);
   }
 
+  .container {
+    padding: 0 var(--space-md);
+  }
+
+  section {
+    padding: var(--space-xl) 0;
+  }
+
+  .hero-title {
+    font-size: clamp(2rem, 8vw, 4rem);
+  }
+
+  .hero-subtitle {
+    font-size: clamp(1rem, 4vw, 1.25rem);
+  }
+
+  .section-title {
+    font-size: clamp(1.75rem, 6vw, 2.5rem);
+  }
+
   .philosophy-grid,
   .services-grid,
   .result-grid {
-    grid-template-columns: repeat(2, 1fr);
-    gap: var(--space-md);
+    grid-template-columns: 1fr;
+    gap: var(--space-lg);
   }
 
   .work-grid {
@@ -1419,13 +1439,33 @@ section {
     gap: var(--space-lg);
   }
 
+  .philosophy-point,
+  .service-card,
+  .work-card {
+    padding: var(--space-lg);
+  }
+
+  .btn {
+    padding: 0.875rem 2rem;
+    font-size: 0.9375rem;
+    width: 100%;
+    justify-content: center;
+  }
+
+  .btn-large {
+    padding: 1rem 2.5rem;
+    font-size: 1rem;
+  }
+
   .footer-content {
     flex-direction: column;
     text-align: center;
+    gap: var(--space-lg);
   }
 
   .footer-links {
     justify-content: center;
+    flex-wrap: wrap;
   }
 }
 
