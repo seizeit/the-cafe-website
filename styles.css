@@ -1456,6 +1456,15 @@ section {
     border-bottom: 1px solid var(--light-grey);
     width: 100%;
     text-align: left;
+    font-size: 0.9375rem;
+    font-weight: 500;
+    color: var(--dark-grey);
+    border-radius: 0;
+    position: relative;
+  }
+
+  .nav-link::before {
+    display: none;
   }
 
   .nav-link-cta {
